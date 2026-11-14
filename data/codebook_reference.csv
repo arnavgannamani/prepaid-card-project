@@ -1,0 +1,218 @@
+variable,codebook_label,codebook_source,cb_n_valid,cb_min,cb_max,cb_weighted_mean
+PUF_ID,Public Use File ID,ID variable,,,,
+sample,Sample,Frame data,6394.0,1.0,3.0,1.234
+fpl,Poverty status,Panel data,6394.0,1.0,3.0,2.597
+SWB_1,I am satisfied with my life,Survey item,6363.0,1.0,7.0,5.302
+SWB_2,I am optimistic about my future,Survey item,6337.0,1.0,7.0,5.406
+SWB_3,"If I work hard today, I will be more successful in the future",Survey item,6329.0,1.0,7.0,5.54
+FWBscore,Financial well-being scale score,IRT score,6389.0,14.0,95.0,54.25
+FWB1_1,I could handle a major unexpected expense,Survey item,6383.0,1.0,5.0,2.924
+FWB1_2,I am securing my financial future,Survey item,6383.0,1.0,5.0,3.103
+FWB1_3,Because of my money situation...I will never have the things I want in life,Survey item,6385.0,1.0,5.0,2.642
+FWB1_4,I can enjoy life because of the way I'm managing my money,Survey item,6383.0,1.0,5.0,3.198
+FWB1_5,I am just getting by financially,Survey item,6381.0,1.0,5.0,2.858
+FWB1_6,I am concerned that the money I have or will save won't last,Survey item,6385.0,1.0,5.0,3.18
+FWB2_1,Giving a gift...would put a strain on my finances for the month,Survey item,6384.0,1.0,5.0,2.468
+FWB2_2,I have money left over at the end of the month,Survey item,6380.0,1.0,5.0,3.276
+FWB2_3,I am behind with my finances,Survey item,6383.0,1.0,5.0,2.149
+FWB2_4,My finances control my life,Survey item,6382.0,1.0,5.0,2.766
+FSscore,Financial skill scale score,IRT score,6386.0,5.0,85.0,49.917
+FS1_1,I know how to get myself to follow through on my financial intentions,Survey item,6382.0,1.0,5.0,3.547
+FS1_2,I know where to find the advice I need to make decisions involving money,Survey item,6383.0,1.0,5.0,3.466
+FS1_3,I know how to make complex financial decisions,Survey item,6382.0,1.0,5.0,3.184
+FS1_4,I am able to make good financial decisions that are new to me,Survey item,6384.0,1.0,5.0,3.267
+FS1_5,I am able to recognize a good financial investment,Survey item,6383.0,1.0,5.0,3.01
+FS1_6,I know how to keep myself from spending too much,Survey item,6384.0,1.0,5.0,3.696
+FS1_7,I know how to make myself save,Survey item,6386.0,1.0,5.0,3.631
+FS2_1,I know when I do not have enough info to make a good decision involving my money,Survey item,6380.0,1.0,5.0,3.71
+FS2_2,I know when I need advice about my money,Survey item,6380.0,1.0,5.0,3.604
+FS2_3,I struggle to understand financial information,Survey item,6380.0,1.0,5.0,2.737
+SUBKNOWL1,How would you assess your overall financial knowledge?,Survey item,6342.0,1.0,7.0,4.606
+ACT1_1,I follow-through on my financial commitments to others,Survey item,6370.0,1.0,5.0,4.158
+ACT1_2,I follow-through on financial goals I set for myself,Survey item,6376.0,1.0,5.0,3.553
+FINGOALS,Do you have a current or recent financial goal?,Survey item,6318.0,0.0,1.0,0.634
+PROPPLAN_1,I consult my budget to see how much money I have left,Survey item,6384.0,1.0,5.0,3.685
+PROPPLAN_2,I actively consider the steps I need to take to stick to my budget,Survey item,6384.0,1.0,5.0,3.624
+PROPPLAN_3,I set financial goals for what I want to achieve with my money,Survey item,6384.0,1.0,5.0,3.661
+PROPPLAN_4,I prepare a clear plan of action w/ detailed steps to achieve my financial goals,Survey item,6384.0,1.0,5.0,3.247
+MANAGE1_1,Past 6 months: Paid all your bills on time,Survey item (modified),6382.0,1.0,5.0,4.453
+MANAGE1_2,Past 6 months: Stayed within your budget or spending plan,Survey item (modified),6382.0,1.0,5.0,3.737
+MANAGE1_3,Past 6 months: Paid off credit card balance in full each month,Survey item (modified),6383.0,1.0,5.0,3.371
+MANAGE1_4,"Past 6 months: Checked your statements, bills and receipts to make sure there were no errors",Survey item (modified),6383.0,1.0,5.0,4.128
+SAVEHABIT,Putting money into savings is a habit for me,Survey item,6374.0,1.0,6.0,4.298
+FRUGALITY,"If I can re-use an item I already have, there's no sense in buying something new",Survey item,6379.0,1.0,6.0,5.182
+AUTOMATED_1,Automated deposits into: A Retirement Savings Account,Survey item,6303.0,0.0,7.0,2.505
+AUTOMATED_2,Automated deposits into: A Non-Retirement Savings Account,Survey item,6296.0,0.0,7.0,2.098
+ASK1_1,I do my own research before making decisions involving money,Survey item,6367.0,1.0,5.0,3.659
+ASK1_2,I ask other people their opinions before making decisions involving money,Survey item,6368.0,1.0,5.0,2.849
+SUBNUMERACY2,Prefers words for expressions of probabilities,Survey item,6355.0,1.0,6.0,3.64
+SUBNUMERACY1,How good are you at working with percentages?,Survey item,6361.0,1.0,6.0,4.204
+CHANGEABLE,Belief that ability to manage money is NOT changeable,Survey item,6356.0,1.0,7.0,3.789
+GOALCONF,Confidence in own ability to achieve financial goals,Survey item,6366.0,1.0,4.0,3.167
+LMscore,Lusardi and Mitchell financial knowledge scale score,Summative scale score,6394.0,0.0,3.0,2.426
+FINKNOWL1,Understanding of compound interest,Survey item,6364.0,1.0,3.0,1.213
+FINKNOWL2,Understanding of inflation and return on savings,Survey item,6356.0,1.0,3.0,2.626
+FINKNOWL3,Understanding of stock vs mutual fund volatility,Survey item,6349.0,1.0,2.0,1.857
+FK1correct,FINKNOWL1 answered correctly,Analysis variable,6394.0,0.0,1.0,0.844
+FK2correct,FINKNOWL2 answered correctly,Analysis variable,6394.0,0.0,1.0,0.732
+FK3correct,FINKNOWL3 answered correctly,Analysis variable,6394.0,0.0,1.0,0.849
+KHscore,Knoll and Houts financial knowledge scale score,IRT score,3125.0,0.242,1.267,0.613
+KHKNOWL1,Understanding of long-term returns on investment,Survey item,6349.0,1.0,3.0,2.458
+KHKNOWL2,Understanding of stocks vs bond vs savings volatility,Survey item,6353.0,1.0,3.0,2.75
+KHKNOWL3,Understanding of benefits of diversification,Survey item,6326.0,1.0,3.0,1.983
+KHKNOWL4,Understanding of possibility of stock market losses,Survey item,6355.0,1.0,2.0,1.192
+KHKNOWL5,Understanding of life insurance,Survey item,6349.0,1.0,2.0,1.28
+KHKNOWL6,Understanding of possibility of housing market losses,Survey item,6364.0,1.0,2.0,1.907
+KHKNOWL7,Understanding of credit card minimum payments,Survey item,6354.0,1.0,4.0,3.065
+KHKNOWL8,Understanding of relationship of bonds and interest rates,Survey item,6343.0,1.0,4.0,2.359
+KHKNOWL9,Understanding of mortgage term length on total interest paid,Survey item,6360.0,1.0,2.0,1.112
+KH1correct,KHKNOWL1 answered correctly,Analysis variable,6394.0,0.0,1.0,0.561
+KH2correct,KHKNOWL2 answered correctly,Analysis variable,6394.0,0.0,1.0,0.819
+KH3correct,KHKNOWL3 answered correctly,Analysis variable,6394.0,0.0,1.0,0.629
+KH4correct,KHKNOWL4 answered correctly,Analysis variable,6394.0,0.0,1.0,0.802
+KH5correct,KHKNOWL5 answered correctly,Analysis variable,6394.0,0.0,1.0,0.714
+KH6correct,KHKNOWL6 answered correctly,Analysis variable,6394.0,0.0,1.0,0.903
+KH7correct,KHKNOWL7 answered correctly,Analysis variable,6394.0,0.0,1.0,0.401
+KH8correct,KHKNOWL8 answered correctly,Analysis variable,6394.0,0.0,1.0,0.324
+KH9correct,KHKNOWL9 answered correctly,Analysis variable,6394.0,0.0,1.0,0.882
+ENDSMEET,Difficulty of covering monthly expenses and bills,Survey item,6350.0,1.0,3.0,1.521
+HOUSING,Which one of the following best describes your housing situation?,Survey item,6352.0,1.0,3.0,1.53
+LIVINGARRANGEMENT,Current living arrangements,Survey item,6363.0,1.0,5.0,2.167
+HOUSERANGES,About how much do you pay for your home each month?,Survey item (modified),5470.0,1.0,7.0,3.791
+IMPUTATION_FLAG,Value for HOUSERANGES was imputed,Paradata,6394.0,0.0,1.0,0.083
+VALUERANGES,"If you were to sell your home today, what do you think it would be worth?",Survey item (modified),3883.0,1.0,4.0,2.344
+MORTGAGE,What do you owe on your home today?,Survey item (modified),3495.0,1.0,3.0,1.8
+SAVINGSRANGES,How much money do you have in savings today...?,Survey item (modified),5210.0,1.0,7.0,4.219
+PRODHAVE_1,Has: Checking or Savings Account at a bank or credit union,Survey item,6394.0,0.0,1.0,0.821
+PRODHAVE_2,Has: Life Insurance,Survey item,6394.0,0.0,1.0,0.478
+PRODHAVE_3,Has: Health Insurance,Survey item,6394.0,0.0,1.0,0.668
+PRODHAVE_4,Has: Retirement Account (such as a 401k or IRA),Survey item,6394.0,0.0,1.0,0.524
+PRODHAVE_5,Has: Pension,Survey item,6394.0,0.0,1.0,0.266
+PRODHAVE_6,"Has: Non-Retirement Investments (such as stocks, bonds or mutual funds)",Survey item,6394.0,0.0,1.0,0.262
+PRODHAVE_7,Has: Education Savings Account (such as 529 or Coverdale),Survey item,6394.0,0.0,1.0,0.064
+PRODHAVE_8,Has: Student/Education Loan (for yourself or someone else),Survey item,6394.0,0.0,1.0,0.15
+PRODHAVE_9,Respondent did not select any item in PRODHAVE bank,Survey item,6394.0,0.0,1.0,0.055
+PRODUSE_1,Used payday loan or cash advance loan,Survey item,6394.0,0.0,1.0,0.032
+PRODUSE_2,Used pawn loan or auto title loan,Survey item,6394.0,0.0,1.0,0.022
+PRODUSE_3,Used reloadable card not linked with checking or savings account,Survey item,6394.0,0.0,1.0,0.101
+PRODUSE_4,Used nonbank service for international money transfers,Survey item,6394.0,0.0,1.0,0.051
+PRODUSE_5,Used nonbank service for check cashing or purchasing a money order,Survey item,6394.0,0.0,1.0,0.074
+PRODUSE_6,Respondent did not select any item in PRODUSE bank,Survey item,6394.0,0.0,1.0,0.767
+CONSPROTECT1,Frequency felt not respected or mistreated w/ financial services,Survey item,6344.0,1.0,4.0,1.824
+CONSPROTECT2,Familiarity w/ agencies and orgs to resolve problems w/ financial services,Survey item,6347.0,1.0,3.0,1.509
+CONSPROTECT3,Reported problem to one of these agencies or orgs,Survey item,6340.0,0.0,1.0,0.068
+EARNERS,Household members currently contributing to paying household bills,Survey item,6316.0,1.0,3.0,1.676
+VOLATILITY,Household income volatility,Survey item,6330.0,1.0,3.0,1.374
+SNAP,Any household member received SNAP benefits,Survey item,6232.0,0.0,1.0,0.121
+MATHARDSHIP_1,Worried whether food would run out before got money to buy more,Survey item,6367.0,1.0,3.0,1.272
+MATHARDSHIP_2,Food didn't last and didn't have money to get more,Survey item,6367.0,1.0,3.0,1.239
+MATHARDSHIP_3,Couldn't afford a place to live,Survey item,6368.0,1.0,3.0,1.148
+MATHARDSHIP_4,Any household member couldn't afford to see doctor or go to hospital,Survey item,6367.0,1.0,3.0,1.239
+MATHARDSHIP_5,Any household member stopped taking medication or took less due to costs,Survey item,6369.0,1.0,3.0,1.205
+MATHARDSHIP_6,Utilities shut off due to non-payment,Survey item,6366.0,1.0,3.0,1.103
+COLLECT,Contacted by debt collector in past 12 months,Survey item,6101.0,0.0,1.0,0.155
+REJECTED_1,I applied for credit and was turned down,Survey item,6322.0,0.0,1.0,0.115
+REJECTED_2,I did not apply for credit because I thought would be turned down,Survey item,6266.0,0.0,1.0,0.143
+ABSORBSHOCK,"Confidence in ability to raise $2,000 in 30 days",Survey item,6027.0,1.0,4.0,3.153
+BENEFITS_1,Employer benefit: Health Insurance,Survey item,6359.0,0.0,1.0,0.697
+BENEFITS_2,Employer benefit: 401(k) or Other Employer-Sponsored Retirement Savings Account,Survey item,6360.0,0.0,1.0,0.525
+BENEFITS_3,Employer benefit: Defined-Benefit Pension,Survey item,6352.0,0.0,1.0,0.28
+BENEFITS_4,Employer benefit: Tuition Reimbursement and/or Student Debt Repayment,Survey item,6351.0,0.0,1.0,0.168
+BENEFITS_5,Employer benefit: Work/Life Benefits,Survey item,6355.0,0.0,1.0,0.453
+FRAUD2,Victim of financial fraud or attempted financial fraud in past 5 years,Survey item,5847.0,0.0,1.0,0.269
+COVERCOSTS,Course of action if income did not cover living costs,Survey item,6336.0,1.0,4.0,2.051
+BORROW_1,My friends or family would lend me the money and expect me to repay them,Survey item,6218.0,0.0,1.0,0.617
+BORROW_2,My friends or family would give me the money with no expectation of repayment,Survey item,6125.0,0.0,1.0,0.332
+SHOCKS_1,Past-year shock: Lost a job,Survey item,6394.0,0.0,1.0,0.075
+SHOCKS_2,Past-year shock: Work hours/pay reduced or business owned by self/HH mem had financial difficulty,Survey item,6394.0,0.0,1.0,0.079
+SHOCKS_3,Past-year shock: Received a foreclosure notice,Survey item,6394.0,0.0,1.0,0.009
+SHOCKS_4,Past-year shock: Had a major car or home repair,Survey item,6394.0,0.0,1.0,0.204
+SHOCKS_5,Past-year shock: Had a health emergency,Survey item,6394.0,0.0,1.0,0.138
+SHOCKS_6,Past-year shock: Got a divorce or separation,Survey item,6394.0,0.0,1.0,0.022
+SHOCKS_7,Past-year shock: Added a child to the household,Survey item,6394.0,0.0,1.0,0.037
+SHOCKS_8,Past-year shock: Experienced the death of primary breadwinner,Survey item,6394.0,0.0,1.0,0.011
+SHOCKS_9,Past-year shock: Received a large sum of money beyond normal income,Survey item,6394.0,0.0,1.0,0.064
+SHOCKS_10,Past-year shock: Had a child start daycare or college,Survey item,6394.0,0.0,1.0,0.045
+SHOCKS_11,Past-year shock: Provided unexpected financial support to a family member or friend,Survey item,6394.0,0.0,1.0,0.129
+SHOCKS_12,Respondent did not select any item in SHOCKS bank,Survey item,6394.0,0.0,1.0,0.485
+MANAGE2,Who in household makes financial decisions,Survey item,6328.0,1.0,3.0,2.322
+PAIDHELP,Do you pay the person who helps take care of money matters in your household?,Survey item,3079.0,0.0,1.0,0.087
+HSLOC,Where did you live at age 17?,Survey item (modified),5749.0,1.0,8.0,1.098
+PAREDUC,Highest level of education by person/people who raised respondent,Survey item (modified),6345.0,1.0,5.0,2.826
+FINSOC2_1,"Growing up, parents: Discussed family financial matters with me",Survey item,6373.0,0.0,1.0,0.354
+FINSOC2_2,"Growing up, parents: Spoke to me about the importance of saving",Survey item,6375.0,0.0,1.0,0.641
+FINSOC2_3,"Growing up, parents: Discussed how to establish a good credit rating",Survey item,6372.0,0.0,1.0,0.368
+FINSOC2_4,"Growing up, parents: Taught me how to be a smart shopper",Survey item,6375.0,0.0,1.0,0.608
+FINSOC2_5,"Growing up, parents: Taught me that my actions determine my success in life",Survey item,6373.0,0.0,1.0,0.733
+FINSOC2_6,"Growing up, parents: Provided me with a regular allowance",Survey item,6372.0,0.0,1.0,0.386
+FINSOC2_7,"Growing up, parents: Provided me with a savings account",Survey item,6372.0,0.0,1.0,0.412
+OBJNUMERACY1,Which of the following represents the biggest risk of getting a disease?,Survey item,6165.0,1.0,3.0,2.024
+ON2correct,OBJNUMERACY2 answered correctly,Analysis variable,6394.0,0.0,1.0,0.632
+ON1correct,OBJNUMERACY1 answered correctly,Analysis variable,6394.0,0.0,1.0,0.771
+MATERIALISM_1,"I admire people who own expensive homes, cars and clothes",Survey item,6221.0,1.0,5.0,2.696
+MATERIALISM_2,The things I own say a lot about how well I'm doing in life,Survey item,6228.0,1.0,5.0,3.014
+MATERIALISM_3,I like to own things that impress people,Survey item,6222.0,1.0,5.0,2.443
+CONNECT,Psychological connectedness,Survey item,6090.0,0.0,100.0,68.36
+HEALTH,"In general, would you say your health is . . .",Survey item,6341.0,1.0,5.0,3.431
+SCFHORIZON,Financial planning time horizon,Survey item,6312.0,1.0,5.0,3.033
+DISCOUNT,"If you had a choice, would you rather receive . . .?",Survey item,6315.0,1.0,2.0,1.572
+MEMLOSS,Experienced memory loss or confusion in past 12 months,Survey item,6325.0,0.0,1.0,0.107
+DISTRESS,Lot of stress in respondent's life,Survey item,6345.0,1.0,5.0,3.226
+SELFCONTROL_1,I often act without thinking through all the alternatives,Survey item,6340.0,1.0,4.0,1.974
+SELFCONTROL_2,I am good at resisting temptation,Survey item,6344.0,1.0,4.0,2.86
+SELFCONTROL_3,I am able to work diligently toward long-term goals,Survey item,6346.0,1.0,4.0,3.019
+OUTLOOK_1,There are services in this area to help me,Survey item,6315.0,1.0,5.0,3.527
+OUTLOOK_2,"There are good work opportunities for me, if I choose to take them",Survey item,6311.0,1.0,5.0,3.449
+INTERCONNECTIONS_1,Seeks money advice from: Parent,Survey item,6394.0,0.0,1.0,0.258
+INTERCONNECTIONS_2,Seeks money advice from: Spouse/Partner,Survey item,6394.0,0.0,1.0,0.431
+INTERCONNECTIONS_3,"Seeks money advice from: Extended family (e.g., uncle, aunt, cousins, grandparents)",Survey item,6394.0,0.0,1.0,0.144
+INTERCONNECTIONS_4,Seeks money advice from: Employer,Survey item,6394.0,0.0,1.0,0.058
+INTERCONNECTIONS_5,Seeks money advice from: Friends/Co-workers,Survey item,6394.0,0.0,1.0,0.238
+INTERCONNECTIONS_6,Seeks money advice from: Community or faith-based organizations,Survey item,6394.0,0.0,1.0,0.036
+INTERCONNECTIONS_7,Seeks money advice from: Financial institution,Survey item,6394.0,0.0,1.0,0.18
+INTERCONNECTIONS_8,"Seeks money advice from: Professional advisor, planner or counselor/coach",Survey item,6394.0,0.0,1.0,0.214
+INTERCONNECTIONS_9,Seeks money advice from: Government,Survey item,6394.0,0.0,1.0,0.033
+INTERCONNECTIONS_10,Respondent did not select any item in INTERCONNECTIONS bank,Survey item,6394.0,0.0,1.0,0.196
+PEM,Everyone has a fair chance at moving up the economic ladder,Survey item,6324.0,1.0,7.0,4.696
+HOUSESAT,How satisfied are you with the place you live currently?,Survey item,6332.0,1.0,4.0,3.28
+SOCSEC1,Have you started receiving social security retirement benefits?,Survey item,2242.0,0.0,1.0,0.837
+SOCSEC2,At what age did you begin receiving benefits?,Survey item (modified),1688.0,62.0,70.0,63.795
+SOCSEC3,Age likely to start receiving Social Security retirement benefits,Survey item (modified),3933.0,61.0,71.0,66.111
+LIFEEXPECT,How likely do you believe it is that you will live beyond age 75?,Survey item,5633.0,0.0,100.0,71.226
+HHEDUC,Highest level of education of all household members,Survey item (modified),6335.0,1.0,5.0,3.372
+KIDS_NoChildren,I have no children that I support financially,Survey item,5802.0,0.0,1.0,0.602
+KIDS_1,Children supported financially: Less than 7 years old,Survey item (modified),6393.0,0.0,2.0,0.177
+KIDS_2,Children supported financially: 7 to 12 years old,Survey item (modified),6391.0,0.0,2.0,0.166
+KIDS_3,Children supported financially: 13 to 17 years old,Survey item (modified),6393.0,0.0,2.0,0.155
+KIDS_4,Children supported financially: More than 18 years old,Survey item (modified),6387.0,0.0,2.0,0.199
+EMPLOY,Primary or only employment status,Analysis variable,6278.0,1.0,8.0,3.994
+EMPLOY1_1,Employment: Self-employed,Survey item,6278.0,0.0,1.0,0.085
+EMPLOY1_2,Employment: Work full-time for an employer or the military,Survey item,6278.0,0.0,1.0,0.431
+EMPLOY1_3,Employment: Work part-time for an employer or the military,Survey item,6278.0,0.0,1.0,0.101
+EMPLOY1_4,Employment: Homemaker,Survey item,6278.0,0.0,1.0,0.076
+EMPLOY1_5,Employment: Full-time student,Survey item,6278.0,0.0,1.0,0.058
+EMPLOY1_6,"Employment: Permanently sick, disabled or unable to work",Survey item,6278.0,0.0,1.0,0.057
+EMPLOY1_7,Employment: Unemployed or temporarily laid off,Survey item,6278.0,0.0,1.0,0.053
+EMPLOY1_8,Employment: Retired,Survey item,6278.0,0.0,1.0,0.216
+EMPLOY1_9,Respondent did not select any item in EMPLOY1 bank,Survey item,6278.0,0.0,0.0,0.0
+RETIRE,Actual date of retirement vs date planned,Survey item,1896.0,1.0,3.0,1.657
+MILITARY,Current/former member of US Armed Forces or spouse/dependent of service member,Survey item (modified),6344.0,0.0,1.0,0.157
+Military_Status,Military status,Analysis variable,6325.0,1.0,5.0,4.64
+agecat,Age,Panel data,6394.0,1.0,8.0,3.951
+generation,Generation,Panel data,6394.0,1.0,4.0,2.773
+PPEDUC,Education (Highest Degree Received),Panel data (modified),6394.0,1.0,5.0,2.894
+PPETHM,Race / Ethnicity,Panel data (modified),6394.0,1.0,4.0,1.752
+PPGENDER,Gender,Panel data,6394.0,1.0,2.0,1.516
+PPHHSIZE,Household Size,Panel data (modified),6394.0,1.0,5.0,2.676
+PPINCIMP,Household Income,Panel data (modified),6394.0,1.0,9.0,5.376
+PPMARIT,Marital Status,Panel data (modified),6394.0,1.0,5.0,2.205
+PPMSACAT,MSA Status,Panel data,6394.0,0.0,1.0,0.865
+PPREG4,Census Region,Panel data,6394.0,1.0,4.0,2.667
+PPREG9,Census Division,Panel data,6394.0,1.0,9.0,5.209
+PPT01,Presence of Household Members - Children 0-1,Panel data (modified),6394.0,0.0,1.0,0.04
+PPT25,Presence of Household Members - Children 2-5,Panel data (modified),6394.0,0.0,1.0,0.088
+PPT612,Presence of Household Members - Children 6-12,Panel data (modified),6394.0,0.0,1.0,0.155
+PPT1317,Presence of Household Members - Children 13-17,Panel data (modified),6394.0,0.0,1.0,0.148
+PPT18OV,Presence of Household Members - Adults 18+,Panel data (modified),6394.0,1.0,4.0,2.161
+PCTLT200FPL,County pct less than 200% of poverty level (ACS 2015 5-year SF),Merged (modified),5999.0,0.0,1.0,0.26
+finalwt,Final weight,Weight,6394.0,0.166,6.639,1.0
