@@ -25,7 +25,7 @@ The audience is course leadership. Work must be thorough, correct and readable b
 | Arnav (Member 1) | Part 1: load, clean, explore | `prepaid_card_analysis.ipynb` | Done |
 | Arnav (Member 1) | Task A: predictors and data prep | `02_features_and_prep.ipynb` | Done |
 | Jairaj (Member 2) | Task B: models and evaluation | `03_models.ipynb` | Done |
-| Member 3 | Task C: card company answer | `04_card_company.ipynb` | To do. Task B is done, so this can be completed |
+| Ethan (Member 3) | Task C: card company answer | `04_card_company.ipynb` | Done |
 | Member 4 | Task D: CFPB answer and wrap-up | `05_cfpb.ipynb` | To do. Task B is done, so this can be completed |
 | Arnav (Member 1) | Final integration and review | all | Last |
 
@@ -46,6 +46,7 @@ Read these before starting any task. Do not redo them.
 - `03_models.ipynb` — Task B. Three tuned models, the choice, the threshold and the test-set evaluation. Read its summary and Sections 8–9.
 - `data/test_scores.csv` and `data/train_oof_scores.csv` — model scores per respondent (`score_chosen` is the one to use). The training file holds out-of-fold scores, so it is safe for profiling.
 - `models/chosen_model.joblib` — the chosen pipeline fitted on the training set. It needs scikit-learn 1.9.1 to load; if it fails, refit it (see the model facts below).
+- `04_card_company.ipynb` — Task C. Model weights as odds ratios, target segments, reachability with observable data, strategy, and who the rule reaches by race/ethnicity. Read its summary and Sections 2, 5 and 6.
 - `data/train.csv` (5,093 rows), `data/test.csv` (1,274 rows), indexed by `PUF_ID`.
 - `data/selected_features.csv` — the 20 predictors: label, theme, preparation, why selected, and `available_to_card_company` (the team's judgement on what a company could know about a prospect).
 - `data/cfpb_clean.csv` — all 204 cleaned columns for every respondent. Join on `PUF_ID` if you need a variable outside the 20.
@@ -59,6 +60,7 @@ Key facts established so far:
 - **Chosen model (Task B):** class-weighted logistic regression, `C=10`. Random forest and XGBoost were statistically tied with it. Cross-validated ROC-AUC 0.728, PR-AUC 0.227; test ROC-AUC 0.739, PR-AUC 0.231.
 - **Recommended rule:** flag the top 20% of scores, which is `score_chosen >= 0.600` (cut-off fixed on training scores). On the test set this flags 246 of 1,274 people, catches 62 of 112 users (55.4%), and 25.2% of those flagged are users (2.87 times the average). On training out-of-fold scores recall is 48.9%, so plan on about half.
 - **Scores are rankings, not probabilities** (class weights inflate them). Compare people by score rank or by actual usage rate within score groups.
+- **Task C findings to build on:** the largest model weights are bank-account status (odds ratio 0.58), debt-collector contact (1.44), SNAP (1.37), credit rejection (1.32) and renting (1.62 against owning). Savings, ability to raise \$2,000, well-being and the hardship count carry almost no weight *inside the model*, although each is strongly related to prepaid use on its own; do not describe them as model drivers. Among people flagged by the top-20% rule (training set), 71.1% report a material hardship, 59.2% have under \$1,000 saved and 44.9% report no bank account. 69.2% of all users have a bank account, and the users the rule misses are 89.1% banked.
 - Race/ethnicity and the other non-bank products (`PRODUSE_1/2/4/5`) are deliberately **not** predictors. Adding them does not improve accuracy. They are profiling columns only.
 
 ## Rules for every task
@@ -118,7 +120,9 @@ This task is complete and merged. The brief is kept for reference. Do not redo i
 
 **Done when** the notebook runs top to bottom with no errors, the three hand-off files exist, and the test set was used only in the final evaluation section.
 
-## Task C — Card company answer (Member 3)
+## Task C — Card company answer (Member 3) — DONE
+
+This task is complete and merged. The brief is kept for reference. Do not redo it; if asked to change it, confirm with the user first.
 
 **Goal.** Answer: "Can I establish a marketing and origination strategy around who to target for this product? Draw any key insights related to usage likelihood of prepaid cards."
 
@@ -142,7 +146,7 @@ This task is complete and merged. The brief is kept for reference. Do not redo i
 
 **Inputs are ready.** Task B is merged: use `data/test_scores.csv`, `data/train_oof_scores.csv` and the chosen model. If those files are missing, tell the user to run `git pull`.
 
-**Lead for the fairness check.** A first look during review found that the top-20% rule flags about 45% of Black and 37% of Hispanic respondents against about 13% of White respondents (training out-of-fold and test scores combined), even though race is not a predictor. Recompute this yourself, compare it with each group's actual usage rate, and report it plainly.
+**Lead for the fairness check.** `04_card_company.ipynb` Section 6 shows the top-20% rule flags 43.8% of Black and 38.5% of Hispanic respondents against 12.9% of White respondents in the training set (49.7%, 31.9% and 12.0% in the test set), even though race is not a predictor. Usage rates are 18.3%, 14.7% and 6.2%, and flagged Black and Hispanic respondents are more often actual users than flagged White respondents. Build on that table instead of repeating it: take it further (for example by knowledge level, fees exposure or hardship within each group) and report it plainly.
 
 **Deliver** `05_cfpb.ipynb` containing:
 1. **Define "at risk"** explicitly: likely to use a prepaid card (high model score, or an actual user) **and** vulnerable to fees or poor decisions (low financial knowledge, low income, no savings, material hardship, no bank account). Justify each criterion.

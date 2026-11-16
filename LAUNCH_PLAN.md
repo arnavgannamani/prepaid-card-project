@@ -1,6 +1,6 @@
 # Launch plan — Mini-Project 2
 
-Part 1 (load, clean, explore), Task A (predictors and data prep) and Task B (models) are done. This plan covers everything left and who owns it.
+Part 1 (load, clean, explore), Task A (predictors and data prep), Task B (models) and Task C (card company answer) are done. Only Task D and the final integration remain. This plan covers everything left and who owns it.
 
 **Using Claude Code?** Open this folder in Claude Code and say "do the task for Member 2" (or 3, or 4). `CLAUDE.md` tells it the project, the rules and your task.
 
@@ -12,7 +12,7 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 |---|---|---|---|
 | **Arnav** | **A. Predictors and data prep** (Steps 5–6), then final integration | `02_features_and_prep.ipynb`, `prep.py`, `data/train.csv`, `data/test.csv`, `data/selected_features.csv` | **Done** |
 | **Jairaj** | **B. Models and evaluation** (Steps 7–8) | `03_models.ipynb`, `data/test_scores.csv`, `data/train_oof_scores.csv`, the chosen model | **Done** |
-| **Member 3** | **C. Card company answer** (Steps 9–10) | `04_card_company.ipynb`, target segments, marketing and origination strategy | Task B (done). Can finish now. |
+| **Ethan** | **C. Card company answer** (Steps 9–10) | `04_card_company.ipynb`, target segments, marketing and origination strategy | **Done** |
 | **Member 4** | **D. CFPB answer and wrap-up** (Steps 11–12) | `05_cfpb.ipynb`, at-risk groups, policy recommendations, conclusions and limitations | Task B (done). Can finish now. |
 
 ## Task details
@@ -30,7 +30,7 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 - Compare on the test set using recall, precision, precision-recall AUC, ROC-AUC and lift by decile. Do not use accuracy alone: predicting "no one" scores 91%.
 - Pick one model, justify it, and save each test respondent's predicted probability to `data/test_scores.csv` for Tasks C and D.
 
-### C. Card company answer — Member 3
+### C. Card company answer — Ethan (done)
 - Interpret the chosen model: which predictors matter and in which direction.
 - Define target segments from the highest-scoring groups and size them (how many people, what usage rate, what lift over 8.8%).
 - Turn that into a marketing and origination strategy: who to target, through what channel, with what message.
@@ -45,8 +45,9 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 ## Order of work
 
 1. **Done:** Task A and Task B. The chosen model is a logistic regression; the recommended rule is to flag the top 20% of scores.
-2. **Now:** Members 3 and 4 run `git pull` and complete Tasks C and D using the model scores in `data/`.
-3. **Last:** Arnav integrates, everyone reviews the whole thing once.
+2. **Done:** Task C.
+3. **Now:** Member 4 runs `git pull` and completes Task D using the model scores in `data/` and the findings in `04_card_company.ipynb`.
+4. **Last:** Arnav integrates, everyone reviews the whole thing once.
 
 ## Working in GitHub
 
