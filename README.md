@@ -10,13 +10,17 @@ Which consumers are more likely to use a prepaid card? The analysis uses the CFP
 | Part | Steps | Status |
 |---|---|---|
 | 1. Data foundation | Load, understand, clean, explore | Done |
-| 2. Modelling | Select predictors, prepare data, build and compare three models | To do |
-| 3. Business answers | Card company strategy, CFPB at-risk groups and policy | To do |
+| 2. Predictors and data prep | Train/test split, 20 predictors, preparation pipeline | Done |
+| 3. Models | Build and compare three models, choose one | To do |
+| 4. Card company answer | Target segments, marketing and origination strategy | To do |
+| 5. CFPB answer | At-risk groups, policy recommendations, conclusions | To do |
+
+See `LAUNCH_PLAN.md` for who owns what. If you use Claude Code, `CLAUDE.md` briefs it on the project and each task.
 
 ## How to run
 
 1. Install the packages: `pip install -r requirements.txt`
-2. Open `prepaid_card_analysis.ipynb` from this folder and run all cells.
+2. Open the notebooks from this folder and run them in order: `prepaid_card_analysis.ipynb`, then `02_features_and_prep.ipynb`.
 
 The notebook reads from `data/` using relative paths, so it must be run from the project folder. All outputs and charts are already saved inside the notebook if you only want to read it.
 
@@ -29,7 +33,13 @@ The notebook reads from `data/` using relative paths, so it must be run from the
 | `data/codebook_reference.csv` | Variable labels and published summary statistics from the CFPB codebook |
 | `data/cfpb_clean.csv` | Cleaned data produced by the notebook (6,367 respondents, 204 columns) |
 | `data/variable_roles.csv` | Label, group, measurement type, role and missing rate for every cleaned column |
-| `figures/` | The notebook's 11 charts as PNG files |
+| `02_features_and_prep.ipynb` | Part 2 notebook: train/test split, selection of 20 predictors, preparation pipeline |
+| `prep.py` | Shared functions: `load_split()`, `build_preprocessor()`, `load_profile()` |
+| `data/train.csv`, `data/test.csv` | The fixed 80/20 split (5,093 and 1,274 respondents) |
+| `data/selected_features.csv` | The 20 predictors with labels, preparation rules and reasons |
+| `LAUNCH_PLAN.md` | Task assignments and order of work |
+| `CLAUDE.md` | Project guide and task briefs for Claude Code |
+| `figures/` | The notebooks' charts as PNG files |
 | `docs/cfpb_nfwbs-puf-codebook.pdf` | Official CFPB codebook |
 
 ## Notes
