@@ -24,9 +24,9 @@ The audience is course leadership. Work must be thorough, correct and readable b
 |---|---|---|---|
 | Arnav (Member 1) | Part 1: load, clean, explore | `prepaid_card_analysis.ipynb` | Done |
 | Arnav (Member 1) | Task A: predictors and data prep | `02_features_and_prep.ipynb` | Done |
-| Member 2 | Task B: models and evaluation | `03_models.ipynb` | To do |
-| Member 3 | Task C: card company answer | `04_card_company.ipynb` | To do, needs Task B |
-| Member 4 | Task D: CFPB answer and wrap-up | `05_cfpb.ipynb` | To do, needs Task B |
+| Jairaj (Member 2) | Task B: models and evaluation | `03_models.ipynb` | Done |
+| Member 3 | Task C: card company answer | `04_card_company.ipynb` | To do. Task B is done, so this can be completed |
+| Member 4 | Task D: CFPB answer and wrap-up | `05_cfpb.ipynb` | To do. Task B is done, so this can be completed |
 | Arnav (Member 1) | Final integration and review | all | Last |
 
 `LAUNCH_PLAN.md` has the same plan for humans.
@@ -43,6 +43,9 @@ Read these before starting any task. Do not redo them.
   - `load_profile()` returns `(train, test)` profiling columns: `PPETHM` (race/ethnicity), `sample`, `PRODUSE_1/2/4/5`.
   - `readable_names(fitted_preprocessor)` gives plain-language names for the 33 model columns.
   - `feature_table()` returns `data/selected_features.csv` as a table.
+- `03_models.ipynb` — Task B. Three tuned models, the choice, the threshold and the test-set evaluation. Read its summary and Sections 8–9.
+- `data/test_scores.csv` and `data/train_oof_scores.csv` — model scores per respondent (`score_chosen` is the one to use). The training file holds out-of-fold scores, so it is safe for profiling.
+- `models/chosen_model.joblib` — the chosen pipeline fitted on the training set. It needs scikit-learn 1.9.1 to load; if it fails, refit it (see the model facts below).
 - `data/train.csv` (5,093 rows), `data/test.csv` (1,274 rows), indexed by `PUF_ID`.
 - `data/selected_features.csv` — the 20 predictors: label, theme, preparation, why selected, and `available_to_card_company` (the team's judgement on what a company could know about a prospect).
 - `data/cfpb_clean.csv` — all 204 cleaned columns for every respondent. Join on `PUF_ID` if you need a variable outside the 20.
@@ -53,6 +56,9 @@ Key facts established so far:
 - 6,367 respondents after cleaning; 8.8% are prepaid users (about 1 to 10).
 - Use rises with financial fragility (low income, no savings, hardship, no bank account) and with low financial knowledge. Most users are still mainstream: 68% have a bank account.
 - No single strong predictor. Baseline to beat: class-weighted logistic regression on the 20 predictors scores cross-validated ROC-AUC 0.728 and PR-AUC 0.227 on the training set.
+- **Chosen model (Task B):** class-weighted logistic regression, `C=10`. Random forest and XGBoost were statistically tied with it. Cross-validated ROC-AUC 0.728, PR-AUC 0.227; test ROC-AUC 0.739, PR-AUC 0.231.
+- **Recommended rule:** flag the top 20% of scores, which is `score_chosen >= 0.600` (cut-off fixed on training scores). On the test set this flags 246 of 1,274 people, catches 62 of 112 users (55.4%), and 25.2% of those flagged are users (2.87 times the average). On training out-of-fold scores recall is 48.9%, so plan on about half.
+- **Scores are rankings, not probabilities** (class weights inflate them). Compare people by score rank or by actual usage rate within score groups.
 - Race/ethnicity and the other non-bank products (`PRODUSE_1/2/4/5`) are deliberately **not** predictors. Adding them does not improve accuracy. They are profiling columns only.
 
 ## Rules for every task
@@ -84,7 +90,9 @@ Key facts established so far:
 **Setup**
 - Install packages with `pip install -r requirements.txt`. If XGBoost will not install, use AdaBoost in its place and say so.
 
-## Task B — Models and evaluation (Member 2)
+## Task B — Models and evaluation (Member 2) — DONE
+
+This task is complete and merged. The brief is kept for reference. Do not redo it; if asked to change it, confirm with the user first.
 
 **Goal.** Build three models, compare them fairly, choose one, and hand its predictions to Tasks C and D.
 
@@ -114,7 +122,9 @@ Key facts established so far:
 
 **Goal.** Answer: "Can I establish a marketing and origination strategy around who to target for this product? Draw any key insights related to usage likelihood of prepaid cards."
 
-**Start now** from Part 1 Section 4 and `data/selected_features.csv`; swap in final model numbers when Task B's files exist. If `data/test_scores.csv` is missing, tell the user Task B is not finished and draft what you can.
+**Inputs are ready.** Task B is merged: use `data/test_scores.csv`, `data/train_oof_scores.csv` and the chosen model. If those files are missing, tell the user to run `git pull`.
+
+**Note on reading the weights.** The saved model keeps every category of housing, employment and marital status (no reference category), so a weight such as "Widowed +0.37" is not measured against a baseline group. For odds ratios, refit the same model with `build_preprocessor(drop_first=True)` on the training set and say which category is the reference; confirm its scores rank people the same way as `score_chosen`.
 
 **Deliver** `04_card_company.ipynb` containing:
 1. **What drives the score:** interpret the chosen model (coefficients or odds ratios for Logit; permutation importance and partial dependence for tree models). Use `readable_names()` for labels. Treat savings, ability to raise \$2,000 and the well-being score as one "liquidity" group; they overlap.
@@ -130,7 +140,9 @@ Key facts established so far:
 
 **Goal.** Answer: "Given potential high fees, and concerns related to unsophisticated users, can we identify at-risk groups? What policies can we prescribe to protect such groups?" Then write the project's conclusions.
 
-**Start now** from Part 1 Sections 4.3–4.5; swap in final model numbers when Task B's files exist.
+**Inputs are ready.** Task B is merged: use `data/test_scores.csv`, `data/train_oof_scores.csv` and the chosen model. If those files are missing, tell the user to run `git pull`.
+
+**Lead for the fairness check.** A first look during review found that the top-20% rule flags about 45% of Black and 37% of Hispanic respondents against about 13% of White respondents (training out-of-fold and test scores combined), even though race is not a predictor. Recompute this yourself, compare it with each group's actual usage rate, and report it plainly.
 
 **Deliver** `05_cfpb.ipynb` containing:
 1. **Define "at risk"** explicitly: likely to use a prepaid card (high model score, or an actual user) **and** vulnerable to fees or poor decisions (low financial knowledge, low income, no savings, material hardship, no bank account). Justify each criterion.

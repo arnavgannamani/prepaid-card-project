@@ -1,6 +1,6 @@
 # Launch plan — Mini-Project 2
 
-Part 1 (load, clean, explore) and Task A (predictors and data prep) are done. This plan covers everything left and who owns it.
+Part 1 (load, clean, explore), Task A (predictors and data prep) and Task B (models) are done. This plan covers everything left and who owns it.
 
 **Using Claude Code?** Open this folder in Claude Code and say "do the task for Member 2" (or 3, or 4). `CLAUDE.md` tells it the project, the rules and your task.
 
@@ -11,9 +11,9 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 | Owner | Task | Delivers | Depends on |
 |---|---|---|---|
 | **Arnav** | **A. Predictors and data prep** (Steps 5–6), then final integration | `02_features_and_prep.ipynb`, `prep.py`, `data/train.csv`, `data/test.csv`, `data/selected_features.csv` | **Done** |
-| **Member 2** | **B. Models and evaluation** (Steps 7–8) | `03_models.ipynb`, `data/test_scores.csv`, the chosen model | Task A |
-| **Member 3** | **C. Card company answer** (Steps 9–10) | `04_card_company.ipynb`, target segments, marketing and origination strategy | Task B for final numbers |
-| **Member 4** | **D. CFPB answer and wrap-up** (Steps 11–12) | `05_cfpb.ipynb`, at-risk groups, policy recommendations, conclusions and limitations | Task B for final numbers |
+| **Jairaj** | **B. Models and evaluation** (Steps 7–8) | `03_models.ipynb`, `data/test_scores.csv`, `data/train_oof_scores.csv`, the chosen model | **Done** |
+| **Member 3** | **C. Card company answer** (Steps 9–10) | `04_card_company.ipynb`, target segments, marketing and origination strategy | Task B (done). Can finish now. |
+| **Member 4** | **D. CFPB answer and wrap-up** (Steps 11–12) | `05_cfpb.ipynb`, at-risk groups, policy recommendations, conclusions and limitations | Task B (done). Can finish now. |
 
 ## Task details
 
@@ -24,7 +24,7 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 - Build one preparation pipeline: impute, one-hot encode the unordered categories, standardize. Fit it on training data only.
 - At the end: merge everyone's work, check the notebooks run top to bottom, and check the numbers agree across sections.
 
-### B. Models and evaluation — Member 2
+### B. Models and evaluation — Jairaj (done)
 - Fit three models on the shared training set. Proposed: Logit, Random Forest, XGBoost (swap in AdaBoost if XGBoost is a problem to install).
 - Tune each with cross-validation and weight the classes for the 1-to-10 imbalance.
 - Compare on the test set using recall, precision, precision-recall AUC, ROC-AUC and lift by decile. Do not use accuracy alone: predicting "no one" scores 91%.
@@ -44,10 +44,9 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 
 ## Order of work
 
-1. **Done:** Task A.
-2. **Now:** Member 2 builds and compares the models. Members 3 and 4 start drafting from the Part 1 findings (segments, at-risk groups, policy research) so they are not waiting.
-3. **When Task B lands:** Members 3 and 4 swap in the final model numbers.
-4. **Last:** Arnav integrates, everyone reviews the whole thing once.
+1. **Done:** Task A and Task B. The chosen model is a logistic regression; the recommended rule is to flag the top 20% of scores.
+2. **Now:** Members 3 and 4 run `git pull` and complete Tasks C and D using the model scores in `data/`.
+3. **Last:** Arnav integrates, everyone reviews the whole thing once.
 
 ## Working in GitHub
 

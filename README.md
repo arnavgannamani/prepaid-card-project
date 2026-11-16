@@ -11,7 +11,7 @@ Which consumers are more likely to use a prepaid card? The analysis uses the CFP
 |---|---|---|
 | 1. Data foundation | Load, understand, clean, explore | Done |
 | 2. Predictors and data prep | Train/test split, 20 predictors, preparation pipeline | Done |
-| 3. Models | Build and compare three models, choose one | To do |
+| 3. Models | Build and compare three models, choose one | Done (logistic regression chosen) |
 | 4. Card company answer | Target segments, marketing and origination strategy | To do |
 | 5. CFPB answer | At-risk groups, policy recommendations, conclusions | To do |
 
@@ -20,7 +20,7 @@ See `LAUNCH_PLAN.md` for who owns what. If you use Claude Code, `CLAUDE.md` brie
 ## How to run
 
 1. Install the packages: `pip install -r requirements.txt`
-2. Open the notebooks from this folder and run them in order: `prepaid_card_analysis.ipynb`, then `02_features_and_prep.ipynb`.
+2. Open the notebooks from this folder and run them in order: `prepaid_card_analysis.ipynb`, `02_features_and_prep.ipynb`, then `03_models.ipynb`.
 
 The notebook reads from `data/` using relative paths, so it must be run from the project folder. All outputs and charts are already saved inside the notebook if you only want to read it.
 
@@ -37,6 +37,9 @@ The notebook reads from `data/` using relative paths, so it must be run from the
 | `prep.py` | Shared functions: `load_split()`, `build_preprocessor()`, `load_profile()` |
 | `data/train.csv`, `data/test.csv` | The fixed 80/20 split (5,093 and 1,274 respondents) |
 | `data/selected_features.csv` | The 20 predictors with labels, preparation rules and reasons |
+| `03_models.ipynb` | Part 3 notebook: three models tuned and compared, one chosen, final test-set evaluation |
+| `data/test_scores.csv`, `data/train_oof_scores.csv` | Model scores for the test set and (out-of-fold) the training set |
+| `models/chosen_model.joblib` | The chosen model, fitted on the training set (needs scikit-learn 1.9.1 to load) |
 | `LAUNCH_PLAN.md` | Task assignments and order of work |
 | `CLAUDE.md` | Project guide and task briefs for Claude Code |
 | `figures/` | The notebooks' charts as PNG files |
