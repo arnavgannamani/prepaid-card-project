@@ -10,17 +10,18 @@ Which consumers are more likely to use a prepaid card? The analysis uses the CFP
 | Part | Steps | Status |
 |---|---|---|
 | 1. Data foundation | Load, understand, clean, explore | Done |
-| 2. Predictors and data prep | Train/test split, 20 predictors, preparation pipeline | Done |
+| 2. Predictors and data prep | Train/test split, 17 predictors, preparation pipeline | Done |
 | 3. Models | Build and compare three models, choose one | Done (logistic regression chosen) |
 | 4. Card company answer | Target segments, marketing and origination strategy | Done |
-| 5. CFPB answer | At-risk groups, policy recommendations, conclusions | To do |
+| 5. CFPB answer | At-risk groups, fairness audit, policy recommendations, conclusions | Done |
+| 6. Final integration | Run everything in order and check the numbers agree | To do |
 
 See `LAUNCH_PLAN.md` for who owns what. If you use Claude Code, `CLAUDE.md` briefs it on the project and each task.
 
 ## How to run
 
 1. Install the packages: `pip install -r requirements.txt`
-2. Open the notebooks from this folder and run them in order: `prepaid_card_analysis.ipynb`, `02_features_and_prep.ipynb`, `03_models.ipynb`, then `04_card_company.ipynb`.
+2. Open the notebooks from this folder and run them in order: `prepaid_card_analysis.ipynb`, `02_features_and_prep.ipynb`, `03_models.ipynb`, `04_card_company.ipynb`, then `05_cfpb.ipynb`.
 
 The notebook reads from `data/` using relative paths, so it must be run from the project folder. All outputs and charts are already saved inside the notebook if you only want to read it.
 
@@ -33,14 +34,15 @@ The notebook reads from `data/` using relative paths, so it must be run from the
 | `data/codebook_reference.csv` | Variable labels and published summary statistics from the CFPB codebook |
 | `data/cfpb_clean.csv` | Cleaned data produced by the notebook (6,367 respondents, 204 columns) |
 | `data/variable_roles.csv` | Label, group, measurement type, role and missing rate for every cleaned column |
-| `02_features_and_prep.ipynb` | Part 2 notebook: train/test split, selection of 20 predictors, preparation pipeline |
+| `02_features_and_prep.ipynb` | Part 2 notebook: train/test split, selection of 17 predictors, preparation pipeline |
 | `prep.py` | Shared functions: `load_split()`, `build_preprocessor()`, `load_profile()` |
 | `data/train.csv`, `data/test.csv` | The fixed 80/20 split (5,093 and 1,274 respondents) |
-| `data/selected_features.csv` | The 20 predictors with labels, preparation rules and reasons |
+| `data/selected_features.csv` | The 17 predictors with labels, preparation rules and reasons |
 | `03_models.ipynb` | Part 3 notebook: three models tuned and compared, one chosen, final test-set evaluation |
 | `data/test_scores.csv`, `data/train_oof_scores.csv` | Model scores for the test set and (out-of-fold) the training set |
 | `models/chosen_model.joblib` | The chosen model, fitted on the training set (needs scikit-learn 1.9.1 to load) |
 | `04_card_company.ipynb` | Part 4 notebook: what drives the score, target segments, reachability, marketing and origination strategy |
+| `05_cfpb.ipynb` | Part 5 notebook: at-risk groups, knowledge and confidence gap, fairness audit, policies, project conclusions |
 | `LAUNCH_PLAN.md` | Task assignments and order of work |
 | `CLAUDE.md` | Project guide and task briefs for Claude Code |
 | `figures/` | The notebooks' charts as PNG files |
@@ -49,5 +51,6 @@ The notebook reads from `data/` using relative paths, so it must be run from the
 ## Notes
 
 - The outcome variable is `PRODUSE_3` (used a reloadable prepaid card not linked to a checking or savings account).
+- The brief allows up to 20 predictors; 17 are used. Age, marital status, sex and SNAP receipt are deliberately excluded because they are protected categories under fair-lending law (ECOA). Race/ethnicity is also excluded.
 - Survey weights are ignored for the analysis, as the project brief requires. Figures describe this sample and are not national estimates.
 - Data source: CFPB National Financial Well-Being Survey, Public Use File.

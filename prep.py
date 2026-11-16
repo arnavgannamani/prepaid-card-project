@@ -1,7 +1,7 @@
 """Shared data loading and preparation for the prepaid card project.
 
 Everyone imports from here so that every model sees the same rows, the same
-20 predictors and the same preparation steps.
+selected predictors and the same preparation steps.
 
     from prep import load_split, build_preprocessor
 
@@ -37,7 +37,7 @@ CATEGORY_LABELS = {
 
 
 def feature_table():
-    """The 20 selected predictors with their label, theme and how each is prepared."""
+    """The selected predictors with their label, theme and how each is prepared."""
     return pd.read_csv(DATA_DIR / "selected_features.csv", index_col="variable")
 
 
@@ -52,7 +52,7 @@ def feature_lists():
 
 
 def load_split():
-    """Return X_train, X_test, y_train, y_test with the 20 selected predictors only."""
+    """Return X_train, X_test, y_train, y_test with the selected predictors only."""
     features = feature_table().index.tolist()
     train = pd.read_csv(DATA_DIR / "train.csv", index_col="PUF_ID")
     test = pd.read_csv(DATA_DIR / "test.csv", index_col="PUF_ID")
@@ -67,7 +67,7 @@ def load_profile():
 
 
 def build_preprocessor(drop_first=False):
-    """Unfitted preparation step for the 20 predictors.
+    """Unfitted preparation step for the selected predictors.
 
     - ordered scales, counts and scores: fill gaps with the median, then standardise (mean 0, sd 1)
     - yes/no variables: fill gaps with the most frequent value, keep as 0/1
