@@ -1,6 +1,6 @@
 # Project guide for Claude
 
-This file is loaded automatically by Claude Code. It tells you what the project is and what is already done. **All four tasks are complete and merged; only the final integration remains.** The task briefs further down are kept for reference.
+This file is loaded automatically by Claude Code. It tells you what the project is and what is already done. **All four tasks and the final integration are complete.** The task briefs further down are kept for reference.
 
 If the person has not said which member they are, ask once, then proceed.
 
@@ -27,7 +27,7 @@ The audience is course leadership. Work must be thorough, correct and readable b
 | Jairaj (Member 2) | Task B: models and evaluation | `03_models.ipynb` | Done |
 | Ethan (Member 3) | Task C: card company answer | `04_card_company.ipynb` | Done |
 | Ani (Member 4) | Task D: CFPB answer and wrap-up | `05_cfpb.ipynb` | Done |
-| Arnav (Member 1) | Final integration and review | all | Last |
+| Arnav (Member 1) | Final integration and review | all | Done |
 
 `LAUNCH_PLAN.md` has the same plan for humans.
 

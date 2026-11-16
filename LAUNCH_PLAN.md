@@ -49,7 +49,7 @@ Names below are placeholders. Replace "Member 2–4" with real names.
 1. **Done:** Task A and Task B. The chosen model is a logistic regression; the recommended rule is to flag the top 20% of scores.
 2. **Done:** Task C.
 3. **Done:** Task D, and the re-run of Parts 2–5 on 17 predictors.
-4. **Now:** final integration.
+4. **Done:** final integration. All five notebooks re-run in order and agree with each other.
 5. **Last:** Arnav integrates, everyone reviews the whole thing once.
 
 ## Working in GitHub

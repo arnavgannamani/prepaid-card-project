@@ -14,7 +14,7 @@ Which consumers are more likely to use a prepaid card? The analysis uses the CFP
 | 3. Models | Build and compare three models, choose one | Done (logistic regression chosen) |
 | 4. Card company answer | Target segments, marketing and origination strategy | Done |
 | 5. CFPB answer | At-risk groups, fairness audit, policy recommendations, conclusions | Done |
-| 6. Final integration | Run everything in order and check the numbers agree | To do |
+| 6. Final integration | Run everything in order and check the numbers agree | Done |
 
 See `LAUNCH_PLAN.md` for who owns what. If you use Claude Code, `CLAUDE.md` briefs it on the project and each task.
 
@@ -47,6 +47,12 @@ The notebook reads from `data/` using relative paths, so it must be run from the
 | `CLAUDE.md` | Project guide and task briefs for Claude Code |
 | `figures/` | The notebooks' charts as PNG files |
 | `docs/cfpb_nfwbs-puf-codebook.pdf` | Official CFPB codebook |
+
+## Reproducibility
+
+All five notebooks were re-run in order from a clean copy of the repository. Every output reproduced exactly, with one exception: XGBoost in Part 3. Several of its settings score almost the same, so which one is picked as best can differ between machines, and its figures then move slightly (for example a cross-validated ROC-AUC of 0.723 on one machine and 0.725 on another). XGBoost is not the chosen model. The chosen logistic regression, its scores, and everything in Parts 4 and 5 are identical on every run.
+
+Tested with pandas 3.0 and 3.1, scikit-learn 1.9.1 and XGBoost 3.4.1.
 
 ## Notes
 
